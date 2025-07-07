@@ -1,11 +1,20 @@
-const scale = 20;
+const scale = 10;
 
 function mousePosition(canvas, pos) {
-  let { left, top } = canvas.getBoundingClientRect();
+  //1 option
   return {
-    x: Math.floor((pos.clientX - left) / scale),
-    y: Math.floor((pos.clientY - top) / scale),
+    x: Math.floor(pos.offsetX / scale),
+    y: Math.floor(pos.offsetY / scale),
   };
+  // or 2 option
+  /*
+   let { left, top } = canvas.getBoundingClientRect();
+  return {
+    x: Math.floor(pos.clientX - left / scale),
+    y: Math.floor(pos.clientY - top / scale),
+  };
+  
+  */
 }
 
 function drawLine(from, to, color) {
@@ -61,14 +70,13 @@ class Canvas {
 class Tools {
   constructor() {
     this.element = document.querySelectorAll(".tool");
-    this.setActive({ target: { id: 0 } });
-    this.currentTool = 0;
+    this.setActive({ target: { id: 0 } }); // initialization active tool (pen)
   }
 
   setActive(e) {
     this.element.forEach((el) => el.classList.remove("active"));
     this.element[e.target.id].classList.add("active");
-    this.currentTool = e.target.id;
+    // return e.target.id;
   }
 }
 
@@ -78,7 +86,7 @@ class ColorPicker {
     this.input = document.querySelector(".range");
     this.ctx = this.element.getContext("2d", { willReadFrequently: true });
     this.input.addEventListener("input", (e) => this.onInput(e));
-    this.onInput({ target: { value: 0 } });
+    this.onInput({ target: { value: 0 } }); // initialization color
   }
 
   onClick(e) {
@@ -111,7 +119,7 @@ class ColorPicker {
 }
 
 class Editor {
-  #tools = [
+  #Alltools = [
     this.pen,
     this.fill,
     this.rectangle,
@@ -123,16 +131,16 @@ class Editor {
     this.canvas = new Canvas();
     this.colorPicker = new ColorPicker();
     this.tools = new Tools();
-    this.tool = this.#tools[0];
+    this.tool = this.#Alltools[0]; // init tool
     this.color = "rgb(0,0,0)";
     this.canvas.element.addEventListener("mousedown", (e) => this.mouse(e));
     this.colorPicker.element.addEventListener("click", (e) => {
       this.color = this.colorPicker.onClick(e);
     });
-    this.tools.element.forEach((el) => {
+    this.tools.element.forEach((el, i) => {
       el.addEventListener("click", (e) => {
         this.tools.setActive(e);
-        this.tool = this.#tools[e.target.id];
+        this.tool = this.#Alltools[i];
       });
     });
   }
