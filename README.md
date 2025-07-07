@@ -13,6 +13,7 @@
   - Eraser functionality
 - 🔧 **In Development**:
   - Line tool (coming soon)
+  - mobile adaptation
   - and more
 
 ## How to Use
