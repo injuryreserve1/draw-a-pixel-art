@@ -116,11 +116,11 @@ button {
 
 .circular-menu .tool .btn_tool {
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
-  top: calc(50% - 13px);
-  left: calc(50% - 13px);
+  top: calc(50% - 6.5px);
+  left: calc(50% - 6.5px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
