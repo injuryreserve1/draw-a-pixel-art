@@ -1,4 +1,4 @@
-# Draw Pixel Art (Pre-Alpha Build)
+# Draw Pixel Art (Pre-Alpha Build) FULL VANILLA JS!
 
 🚀 **Live Demo**: [https://injuryreserve1.github.io/draw-a-pixel-art/](https://injuryreserve1.github.io/draw-a-pixel-art/)
 
