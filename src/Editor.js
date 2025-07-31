@@ -1,6 +1,6 @@
-import { mousePosition } from "./features/mousePosition";
+import { mousePosition } from "./features/mousePosition.js";
 
-import { Canvas, Tools, ColorPicker } from "./components";
+import { Canvas, Tools, ColorPicker } from "./components/index.js";
 
 export class Editor {
   constructor(state) {

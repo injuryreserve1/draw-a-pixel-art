@@ -1,4 +1,4 @@
-import { scale } from "./../../index";
+import { scale } from "./../../index.js";
 
 export class Canvas {
   constructor(state) {

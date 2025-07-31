@@ -1,5 +1,4 @@
-import { Canvas } from "./components";
-import { Editor } from "./Editor";
+import { Editor } from "./Editor.js";
 export const scale = 20;
 
 const around = [
