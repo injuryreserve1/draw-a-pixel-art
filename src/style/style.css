@@ -127,32 +127,32 @@ button {
 }
 
 .circular-menu li:nth-child(1) .btn_tool {
-  background-image: url(/../../icons/pencil.svg);
+  background-image: url(../../icons/pencil.svg);
   transform: rotateZ(30deg) translateY(-80px) rotateZ(-30deg);
 }
 
 .circular-menu li:nth-child(2) .btn_tool {
-  background-image: url(/../../icons/fill.svg);
+  background-image: url(../../icons/fill.svg);
   transform: rotateZ(90deg) translateY(-80px) rotateZ(-90deg);
 }
 
 .circular-menu li:nth-child(3) .btn_tool {
-  background-image: url(/../../icons/rectangle.svg);
+  background-image: url(../../icons/rectangle.svg);
   transform: rotateZ(150deg) translateY(-80px) rotateZ(-150deg);
 }
 
 .circular-menu li:nth-child(4) .btn_tool {
-  background-image: url(/../../icons/eraser.svg);
+  background-image: url(../../icons/eraser.svg);
   transform: rotateZ(210deg) translateY(-80px) rotateZ(-210deg);
 }
 
 .circular-menu li:nth-child(5) .btn_tool {
-  background-image: url(/../../icons/circle.svg);
+  background-image: url(../../icons/circle.svg);
   transform: rotateZ(270deg) translateY(-80px) rotateZ(-270deg);
 }
 
 .circular-menu li:nth-child(6) .btn_tool {
-  background-image: url(/../../icons/line.svg);
+  background-image: url(../../icons/line.svg);
   transform: rotateZ(330deg) translateY(-80px) rotateZ(-330deg);
 }
 
