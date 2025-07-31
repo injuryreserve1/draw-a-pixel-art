@@ -10,11 +10,10 @@
   - Shapes:
     - Squares
     - Circles
+    - Lines
   - Eraser functionality
 - 🔧 **In Development**:
-  - Line tool (coming soon)
-  - mobile adaptation
-  - and more
+  - undo/redo buttons
 
 ## How to Use
 
