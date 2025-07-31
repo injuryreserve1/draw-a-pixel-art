@@ -2,88 +2,90 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js" defer></script>
-    <link rel="preconnected" href="fonts.googleapis.com">
-    <link rel="preconnected" href="fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor</title>
+  <script type="module" src="./src/index.js" defer></script>
+  <link rel="preconnected" href="fonts.googleapis.com">
+  <link rel="preconnected" href="fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+  <link rel="stylesheet" href="./src/style/style.css">
 </head>
 
 <body>
-    <div class="container">
+  <div class="container">
 
-        <canvas class="canvas" width="900" height="440"></canvas>
+    <canvas class="canvas" width="900" height="440"></canvas>
 
-        <div class="tools">
-            <div class="actions-menu dropup">
-                <div class="color-palette"></div>
-                <div class="dropup-menu">
-                    <canvas class="palette" width="300px" height="300px"></canvas>
-                    <div>
-                        <span>color:</span>
-                        <input value="0" class="range" type="range" min="0" max="357">
-                    </div>
-
-                </div>
-            </div>
-            <ul class="circular-menu">
-                <li class="tool">
-                    <div class="item" id="0"></div>
-                    <div class="option">
-                        <div class="btn_tool" id="0"></div>
-                    </div>
-
-                </li>
-                <li class="tool">
-                    <div class="item" id="1"></div>
-                    <div class="option">
-                        <div class="btn_tool" id="1"></div>
-                    </div>
-
-                </li>
-                <li class="tool">
-                    <div class="item" id="2"></div>
-                    <div class="option">
-                        <div class="btn_tool" id="2"></div>
-                    </div>
-
-                </li>
-                <li class="tool">
-                    <div class="item" id="3"></div>
-                    <div class="option">
-                        <div class="btn_tool" id="3"></div>
-                    </div>
-
-                </li>
-                <li class="tool">
-                    <div class="item" id="4"></div>
-                    <div class="option">
-                        <div class="btn_tool" id="4"></div>
-                    </div>
-
-                </li>
-                <li class="tool">
-                    <div class="item" id="5"></div>
-                    <div class="option">
-                        <div class="btn_tool" id="5"></div>
-                    </div>
-
-                </li>
-            </ul>
-
-            <ul class="actions-menu">
-                <li class="action"><button>File</button></li>
-                <li class="action"><button>Edit</button></li>
-                <li class="action"><button>Settings</button></li>
-                <li class="action"><button>Exports</button></li>
-            </ul>
+    <div class="tools">
+      <div class="actions-menu dropup">
+        <div class="color-palette"></div>
+        <div class="dropup-menu">
+          <canvas class="palette" width="300px" height="300px"></canvas>
+          <div>
+            <span>color:</span>
+            <input value="0" class="range" type="range" min="0" max="357">
+          </div>
 
         </div>
+      </div>
+      <ul class="circular-menu">
+        <li class="tool">
+          <div class="item" id="0"></div>
+          <div class="option">
+            <div class="btn_tool" id="0"></div>
+          </div>
+
+        </li>
+        <li class="tool">
+          <div class="item" id="1"></div>
+          <div class="option">
+            <div class="btn_tool" id="1"></div>
+          </div>
+
+        </li>
+        <li class="tool">
+          <div class="item" id="2"></div>
+          <div class="option">
+            <div class="btn_tool" id="2"></div>
+          </div>
+
+        </li>
+        <li class="tool">
+          <div class="item" id="3"></div>
+          <div class="option">
+            <div class="btn_tool" id="3"></div>
+          </div>
+
+        </li>
+        <li class="tool">
+          <div class="item" id="4"></div>
+          <div class="option">
+            <div class="btn_tool" id="4"></div>
+          </div>
+
+        </li>
+        <li class="tool">
+          <div class="item" id="5"></div>
+          <div class="option">
+            <div class="btn_tool" id="5"></div>
+          </div>
+
+        </li>
+      </ul>
+
+      <ul class="actions-menu">
+        <!-- <li class="action"><button>File</button></li>
+        <li class="action"><button>Edit</button></li>
+        <li class="action"><button>Settings</button></li>
+        <li class="action"><button>Exports</button></li> -->
+        <li class="action "><button id="undo-btn">&larr; undo</button></li>
+        <li class="action"><button id="redo-btn">redo &rarr;</button></li>
+      </ul>
 
     </div>
+
+  </div>
 
 </body>
 

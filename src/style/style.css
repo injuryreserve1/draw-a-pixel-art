@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"); */
 
 :root {
   box-sizing: border-box;
@@ -21,7 +21,9 @@ li {
 }
 
 body {
-  background-color: #272727ed;
+  background-color: rgb(149, 85, 142);
+  min-height: 100vh;
+  margin: 0;
 }
 
 button {
@@ -33,10 +35,12 @@ button {
 }
 
 .container {
+  background-color: rgba(67, 35, 35, 0);
   max-width: 960px;
   margin: 0 auto;
   display: grid;
   gap: 10px;
+  /* min-height: 100vh; */
   grid-template-columns: 3fr;
   grid-template-rows: 4fr;
 }
@@ -66,13 +70,8 @@ button {
   height: 220px;
   position: relative;
   border-radius: 50%;
-  background: #4775a1;
-  background: radial-gradient(
-    circle,
-    rgba(71, 117, 161, 0.5) 3%,
-    rgba(64, 130, 163, 1) 50%,
-    rgba(27, 189, 222, 1) 100%
-  );
+  background: #ffffff;
+
   overflow: hidden;
 }
 
@@ -116,44 +115,44 @@ button {
 
 .circular-menu .tool .btn_tool {
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
-  top: calc(50% - 13px);
-  left: calc(50% - 13px);
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 16px;
   text-align: center;
 }
 
 .circular-menu li:nth-child(1) .btn_tool {
-  background-image: url(icons/pencil.svg);
+  background-image: url(/../../icons/pencil.svg);
   transform: rotateZ(30deg) translateY(-80px) rotateZ(-30deg);
 }
 
 .circular-menu li:nth-child(2) .btn_tool {
-  background-image: url(icons/fill.svg);
+  background-image: url(/../../icons/fill.svg);
   transform: rotateZ(90deg) translateY(-80px) rotateZ(-90deg);
 }
 
 .circular-menu li:nth-child(3) .btn_tool {
-  background-image: url(icons/rectangle.svg);
+  background-image: url(/../../icons/rectangle.svg);
   transform: rotateZ(150deg) translateY(-80px) rotateZ(-150deg);
 }
 
 .circular-menu li:nth-child(4) .btn_tool {
-  background-image: url(icons/eraser.svg);
+  background-image: url(/../../icons/eraser.svg);
   transform: rotateZ(210deg) translateY(-80px) rotateZ(-210deg);
 }
 
 .circular-menu li:nth-child(5) .btn_tool {
-  background-image: url(icons/circle.svg);
+  background-image: url(/../../icons/circle.svg);
   transform: rotateZ(270deg) translateY(-80px) rotateZ(-270deg);
 }
 
 .circular-menu li:nth-child(6) .btn_tool {
-  background-image: url(icons/line.svg);
+  background-image: url(/../../icons/line.svg);
   transform: rotateZ(330deg) translateY(-80px) rotateZ(-330deg);
 }
 
@@ -164,7 +163,7 @@ button {
 }
 
 .circular-menu .tool.active .item {
-  background-color: #1754d8;
+  background-color: #4d0336;
 }
 
 .circular-menu::after {
@@ -236,6 +235,11 @@ button {
 
 .range {
   accent-color: #1a72b1;
+}
+
+#undo-btn,
+#redo-btn {
+  font-size: 16px;
 }
 
 @media (max-width: 800px) {
