@@ -1,4 +1,3 @@
-import { mousePosition } from "./features/index.js";
 import { Canvas, Tools, ColorPicker } from "./components/index.js";
 import { scale } from "./components/index.js";
 
