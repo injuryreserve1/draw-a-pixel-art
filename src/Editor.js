@@ -1,6 +1,6 @@
 import { mousePosition } from "./features/index.js";
-
 import { Canvas, Tools, ColorPicker } from "./components/index.js";
+import { scale } from "./components/index.js";
 
 export function mousePosition(canvas, pos) {
   //1 option
