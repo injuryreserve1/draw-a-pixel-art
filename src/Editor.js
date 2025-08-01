@@ -1,4 +1,4 @@
-import { mousePosition } from "./features/mousePosition.js";
+import { mousePosition } from "./features/index.js";
 
 import { Canvas, Tools, ColorPicker } from "./components/index.js";
 

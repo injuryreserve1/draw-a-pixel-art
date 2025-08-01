@@ -1,4 +1,4 @@
-import { scale } from "../../index.js";
+import { scale } from "../../../index.js";
 
 export function mousePosition(canvas, pos) {
   //1 option
