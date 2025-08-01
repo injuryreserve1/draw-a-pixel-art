@@ -20,33 +20,33 @@ export class Editor {
     this.canvas.pixels = copy;
     this.canvas.render();
   }
-
-  mouse(e) {
-    if (e.button !== 0) return;
-
-    const pos = mousePosition(this.canvas.element, e);
-    const toolFunc = this.state.tools[this.state.currentTool](
-      pos,
-      this,
-      this.canvas
-    );
-    if (!toolFunc) return;
-
-    const handleMove = (e) => {
-      if (e.buttons === 0) {
-        this.canvas.element.removeEventListener("mousemove", handleMove);
-        return;
-      }
-      const newPos = mousePosition(this.canvas.element, e);
-      toolFunc(newPos);
-    };
-
-    const handleUp = () => {
-      this.canvas.element.removeEventListener("mousemove", handleMove);
-      this.canvas.element.removeEventListener("mouseup", handleUp);
-    };
-
-    this.canvas.element.addEventListener("mousemove", handleMove);
-    this.canvas.element.addEventListener("mouseup", handleUp);
-  }
 }
+
+Editor.prototype.mouse = function mouse(e) {
+  if (e.button !== 0) return;
+
+  const pos = mousePosition(this.canvas.element, e);
+  const toolFunc = this.state.tools[this.state.currentTool](
+    pos,
+    this,
+    this.canvas
+  );
+  if (!toolFunc) return;
+
+  const handleMove = (e) => {
+    if (e.buttons === 0) {
+      this.canvas.element.removeEventListener("mousemove", handleMove);
+      return;
+    }
+    const newPos = mousePosition(this.canvas.element, e);
+    toolFunc(newPos);
+  };
+
+  const handleUp = () => {
+    this.canvas.element.removeEventListener("mousemove", handleMove);
+    this.canvas.element.removeEventListener("mouseup", handleUp);
+  };
+
+  this.canvas.element.addEventListener("mousemove", handleMove);
+  this.canvas.element.addEventListener("mouseup", handleUp);
+};

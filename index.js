@@ -7,7 +7,6 @@ import {
   pen,
   rectangle,
 } from "./src/features/index.js";
-export const scale = 20;
 
 const tools = [pen, fill, rectangle, eraser, circle, line];
 

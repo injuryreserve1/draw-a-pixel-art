@@ -25,8 +25,6 @@ export function line(pos, editor) {
     // editor.draw(line);
     editor.canvas.pixels = [...initialPixels];
     editor.canvas.render();
-
-    // Рисуем новую линию
     const linePixels = drawLine(pos, end, editor.state.color);
     editor.draw(linePixels);
   };
