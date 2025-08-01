@@ -2,6 +2,22 @@ import { mousePosition } from "./features/index.js";
 
 import { Canvas, Tools, ColorPicker } from "./components/index.js";
 
+export function mousePosition(canvas, pos) {
+  //1 option
+  return {
+    x: Math.floor(pos.offsetX / scale),
+    y: Math.floor(pos.offsetY / scale),
+  };
+  // or 2 option
+  /*
+   let { left, top } = canvas.getBoundingClientRect();
+  return {
+    x: Math.floor(pos.clientX - left / scale),
+    y: Math.floor(pos.clientY - top / scale),
+  };
+*/
+}
+
 export class Editor {
   constructor(state) {
     this.undoButton = document.getElementById("undo-btn");
