@@ -2,11 +2,13 @@ export class ColorPicker {
   constructor(state) {
     this.element = document.querySelector(".palette");
     this.input = document.querySelector(".range");
+    this.colorVisualization = document.querySelector(".color");
     this.ctx = this.element.getContext("2d", { willReadFrequently: true });
-    this.onInput({ target: { value: 0 } }); // initialization color
+    this.onInput({ target: { value: 0 } }); // init color
     this.input.addEventListener("input", (e) => this.onInput(e));
     this.element.addEventListener("click", (e) => {
       state.color = this.onClick(e);
+      this.colorVisualization.style.backgroundColor = state.color;
     });
   }
 
@@ -15,7 +17,7 @@ export class ColorPicker {
     let y = e.offsetY;
     let pixel = this.ctx.getImageData(x, y, 1, 1)["data"];
     let rgb = `rgb(${pixel[0]},${pixel[1]},${pixel[2]})`;
-    console.log(rgb);
+    // console.log(rgb);
     return rgb;
   }
 

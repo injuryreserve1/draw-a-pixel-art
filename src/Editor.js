@@ -1,5 +1,4 @@
-import { Canvas, Tools, ColorPicker } from "./components/index.js";
-import { scale } from "./components/index.js";
+import { Canvas, Tools, ColorPicker, scale } from "./components/index.js";
 
 export function mousePosition(canvas, pos) {
   //1 option
@@ -19,9 +18,10 @@ export function mousePosition(canvas, pos) {
 
 export class Editor {
   constructor(state) {
-    this.undoButton = document.getElementById("undo-btn");
     this.state = state;
+
     this.canvas = new Canvas(this.state);
+
     this.colorPicker = new ColorPicker(this.state);
     this.tools = new Tools(this.state);
     this.canvas.element.addEventListener("mousedown", (e) => this.mouse(e));
@@ -46,6 +46,7 @@ Editor.prototype.mouse = function mouse(e) {
     this,
     this.canvas
   );
+
   if (!toolFunc) return;
 
   const handleMove = (e) => {

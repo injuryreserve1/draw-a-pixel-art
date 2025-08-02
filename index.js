@@ -15,5 +15,6 @@ const entryState = {
   backgroundColor: "white",
   tools: tools,
   currentTool: 0,
+  done: [],
 };
 let editor = new Editor(entryState);

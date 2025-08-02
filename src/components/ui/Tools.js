@@ -1,17 +1,20 @@
 export class Tools {
   constructor(state) {
-    this.element = document.querySelectorAll(".tool");
-    this.setActive({ target: { id: 0 } }, state);
-    this.element.forEach((el, i) => {
-      el.addEventListener("click", (e) => {
-        this.setActive(e, state);
-      });
+    this.element = Array.from(document.querySelectorAll(".tool"));
+
+    this.currentTool = this.element[state.currentTool];
+    this.currentTool.classList.add("active");
+
+    this.element.forEach((tool) => {
+      tool.addEventListener("click", () => this.setActive(tool, state));
     });
   }
 
-  setActive(e, state) {
-    this.element.forEach((el) => el.classList.remove("active"));
-    this.element[e.target.id].classList.add("active");
-    state.currentTool = +e.target.id;
+  setActive(tool, state) {
+    this.currentTool?.classList.remove("active");
+    this.currentTool = tool;
+    tool.classList.add("active");
+    state.currentTool = this.element.indexOf(tool);
+    // console.log(this.element.indexOf(tool));
   }
 }
