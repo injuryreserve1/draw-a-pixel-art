@@ -14,7 +14,7 @@ export class Tools {
     this.currentTool?.classList.remove("active");
     this.currentTool = tool;
     tool.classList.add("active");
-    state.tools = state.this.element.indexOf(tool);
+    state.currentTool = this.element.indexOf(tool);
     // console.log(this.element.indexOf(tool));
   }
 }
