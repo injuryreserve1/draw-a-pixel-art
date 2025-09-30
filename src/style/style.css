@@ -21,7 +21,7 @@ li {
 }
 
 body {
-  background-color: rgb(149, 85, 142);
+  background-color: rgb(87, 85, 87);
   min-height: 100vh;
   margin: 0;
 }
@@ -199,7 +199,7 @@ button {
   display: none;
   position: absolute;
   left: 0;
-  top: -17em;
+  bottom: 100%;
   min-width: 300px;
   background-color: #272727;
   font-size: 1.5em;
